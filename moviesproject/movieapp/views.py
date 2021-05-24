@@ -8,7 +8,7 @@ def index(request):
     context = {
         'movie': movie,
     }
-    return render (request,'movieapp/home.html',context)
+    return render (request,'movieapp/index.html',context)
 def details(request,movie_id):
     ob = Movie.objects.get(id=movie_id)
     return render(request,'movieapp/details.html',{'ob':ob})
