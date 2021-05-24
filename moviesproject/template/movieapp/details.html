@@ -1,0 +1,24 @@
+<title> Details</title>
+{%extends 'movieapp/base.html'%}
+{%block content%}
+<style>
+.col-md-6{
+color:white;
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{ob.img.url}}" width="250" height="200">
+        </div>
+        <div class="col-md-6">
+            <h5> {{ob.name}} </h5><br>
+            <h5>{{ob.desc}}</h5><br>
+            <h5>{{ob.year}}</h5><br>
+            <a class="btn btn-warning"  href ="{% url 'movieapp:update' ob.id%}">Update</a>
+            <a class="btn btn-danger"  href ="{% url 'movieapp:delete' ob.id%}">Delete</a><br>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

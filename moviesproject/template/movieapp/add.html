@@ -1,0 +1,12 @@
+<title>add movie</title>
+{%extends 'movieapp/base.html'%}
+{%block content%}
+ <form method="POST" enctype="multipart/form-data">
+     {%csrf_token%}
+     <input type="text" name="name" placeholder="Movie name">
+     <input type="text" name="desc" placeholder="Description">
+     <input type="text" name="year" placeholder="Year">
+     <input type="file" name="img" >
+     <input type="submit" value="Add">
+ </form>
+{%endblock%}
